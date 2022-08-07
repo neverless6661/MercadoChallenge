@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MercadoChallenge">
         <activity
+            android:name=".DetalleBusquedaBarra"
+            android:exported="false" />
+        <activity
+            android:name=".DetalleBusqueda"
+            android:exported="false" />
+        <activity
+            android:name=".ListaBusqueda"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

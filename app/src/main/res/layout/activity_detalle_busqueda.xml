@@ -6,4 +6,1066 @@
     android:layout_height="match_parent"
     tools:context=".DetalleBusqueda">
 
+    <LinearLayout
+        android:id="@+id/LinearTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f0d44c"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginEnd="8dp"
+            android:weightSum="14"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/txtTitProducto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:textSize="22sp"
+                android:layout_weight="8"
+                android:text="Producto" />
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="22dp"
+                android:layout_weight="2"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:tint="@color/black"
+                android:backgroundTint="@color/black"
+                android:foregroundTint="@color/black"
+                app:srcCompat="@drawable/heart" />
+
+            <ImageButton
+                android:id="@+id/imageButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:tint="@color/black"
+                android:backgroundTint="@color/black"
+                android:foregroundTint="@color/black"
+                app:srcCompat="@drawable/ic_search" />
+
+            <ImageButton
+                android:id="@+id/imgbtnGoCart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:tint="@color/black"
+                android:backgroundTint="@color/black"
+                android:foregroundTint="@color/black"
+                app:srcCompat="@drawable/ic_cart" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnAddress"
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:drawableLeft="@drawable/ic_location"
+            android:background="@android:color/transparent"
+            android:textSize="12sp"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:drawableTint="@color/black"
+            android:textColor="#000000"
+            android:text="  Enviar a usuario - CP 00000 >" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/LinearTop"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtCondicion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingStart="10dp"
+                android:paddingLeft="10dp"
+                android:paddingEnd="10dp"
+                android:paddingRight="10dp"
+                android:textSize="14sp"
+                android:text="Condición" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingStart="10dp"
+                android:paddingLeft="10dp"
+                android:paddingEnd="10dp"
+                android:paddingRight="10dp"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:text="Titulo artículo" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="30"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgStar1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/ic_star" />
+
+                <ImageView
+                    android:id="@+id/imgStar2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/ic_star" />
+
+                <ImageView
+                    android:id="@+id/imgStar3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/ic_star" />
+
+                <ImageView
+                    android:id="@+id/imgStar4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/ic_star" />
+
+                <ImageView
+                    android:id="@+id/imgStar5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/ic_star" />
+
+                <TextView
+                    android:id="@+id/txtReputationArt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="(0)" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imgArtDetalle"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+            <ImageButton
+                android:id="@+id/btnShareDetalle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:background="@android:color/transparent"
+                android:layout_marginEnd="30dp"
+                android:layout_marginRight="10dp"
+                app:srcCompat="@drawable/ic_outline_share_24"
+                />
+
+            <TextView
+                android:id="@+id/txtPriceDetalle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:paddingStart="10dp"
+                android:paddingLeft="10dp"
+                android:paddingEnd="10dp"
+                android:paddingRight="10dp"
+                android:text="$00.00" />
+
+            <TextView
+                android:id="@+id/txtMesesSinIntereses"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#659072"
+                android:textSize="18sp"
+                android:layout_marginTop="10dp"
+                android:paddingStart="10dp"
+                android:paddingLeft="10dp"
+                android:paddingEnd="10dp"
+                android:paddingRight="10dp"
+                android:text="12x $ 0 sin interés" />
+
+            <TextView
+                android:id="@+id/txtIva"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:layout_marginTop="10dp"
+                android:paddingStart="10dp"
+                android:paddingLeft="10dp"
+                android:paddingEnd="10dp"
+                android:paddingRight="10dp"
+                android:text="IVA incluido" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:textAllCaps="false"
+                android:textAlignment="textStart"
+                android:textColor="#407af8"
+                android:background="@android:color/transparent"
+                android:text="Ver los medios de pago" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:paddingStart="10dp"
+                android:paddingLeft="10dp"
+                android:paddingEnd="10dp"
+                android:paddingRight="10dp"
+                android:weightSum="30"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:id="@+id/imgTruckEnvio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/truck" />
+
+                <TextView
+                    android:id="@+id/txtTipoEnvioDetalle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="29"
+                    android:textColor="#529464"
+                    android:textSize="16sp"
+                    android:layout_gravity="center_vertical"
+                    android:paddingStart="5dp"
+                    android:paddingLeft="5dp"
+                    android:text="Tipo de tiempo estimado de envío" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnVerFormaPago"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:textColor="#407af8"
+                android:textAllCaps="false"
+                android:textSize="14sp"
+                android:background="@android:color/transparent"
+                android:gravity="start"
+                android:paddingStart="45dp"
+                android:text="Ver mas formas de entrega" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="30"
+                android:layout_marginTop="10dp"
+                android:paddingStart="10dp"
+                android:paddingLeft="10dp"
+                android:paddingEnd="10dp"
+                android:paddingRight="10dp"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:id="@+id/imageView18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/regreso" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="29"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtTitDevolucion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#529464"
+                        android:textSize="16sp"
+                        android:paddingStart="5dp"
+                        android:paddingLeft="5dp"
+                        android:text="Devolución gratis" />
+
+                    <TextView
+                        android:id="@+id/txtDiasDevolucion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#529464"
+                        android:textSize="14sp"
+                        android:text="Tienes 30 días desde que lo recibes" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnConoceDevolucion"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:background="@android:color/transparent"
+                android:textSize="14sp"
+                android:textColor="#407af8"
+                android:textAllCaps="false"
+                android:textAlignment="textStart"
+                android:paddingStart="40dp"
+                android:text="Conocer más" />
+
+            <TextView
+                android:id="@+id/txtDisponibilidad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingStart="10dp"
+                android:paddingLeft="10dp"
+                android:paddingEnd="10dp"
+                android:paddingRight="10dp"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:text="Cantidad disponible" />
+
+            <Button
+                android:id="@+id/btnComprar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:paddingStart="10dp"
+                android:paddingLeft="10dp"
+                android:paddingEnd="10dp"
+                android:paddingRight="10dp"
+                android:textAllCaps="false"
+                android:backgroundTint="#407af8"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:text="Comprar ahora" />
+
+            <Button
+                android:id="@+id/btnAddCart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:textColor="#407af8"
+                android:textAllCaps="false"
+                android:backgroundTint="#e5edfa"
+                android:text="Agregar al carrito" />
+
+            <LinearLayout
+                android:id="@+id/LinearProtegida"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="30"
+                android:layout_marginTop="10dp"
+                android:paddingStart="10dp"
+                android:paddingLeft="10dp"
+                android:paddingEnd="10dp"
+                android:paddingRight="10dp"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:id="@+id/imgSeguro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/verificado" />
+
+                <TextView
+                    android:id="@+id/txtCompraProtegida"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="29"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="#529464"
+                    android:textSize="16sp"
+                    android:layout_gravity="center_vertical"
+                    android:text="Compra Protegida, recibe el producto que esperabas o te devolvemos tu dinero." />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LinearPuntos"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="30"
+                android:layout_marginTop="10dp"
+                android:paddingStart="10dp"
+                android:paddingLeft="10dp"
+                android:paddingEnd="10dp"
+                android:paddingRight="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgCopa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/trofeo" />
+
+                <TextView
+                    android:id="@+id/txtSumaPuntos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="#529464"
+                    android:textSize="16sp"
+                    android:layout_gravity="center_vertical"
+                    android:text="Mercado Puntos, sumas 0 puntos" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnAddFavoritos"
+                    android:layout_width="100dp"
+                    android:layout_height="38dp"
+                    android:layout_weight="1"
+                    android:textColor="#4579ef"
+                    android:textAllCaps="false"
+                    android:textSize="12sp"
+                    android:drawableLeft="@drawable/megusta"
+
+                    android:background="@android:color/transparent"
+                    android:text="Agregar a favoritos" />
+
+                <Button
+                    android:id="@+id/btnCompartir"
+                    android:layout_width="100dp"
+                    android:layout_height="38dp"
+                    android:layout_weight="1"
+                    android:textColor="#4579ef"
+                    android:textAllCaps="false"
+                    android:textSize="12sp"
+                    android:background="@android:color/transparent"
+                    android:drawableLeft="@drawable/compartir"
+                    android:text="Compartir" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtTitCaracteristicas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:paddingStart="10dp"
+                android:paddingLeft="10dp"
+                android:paddingEnd="10dp"
+                android:paddingRight="10dp"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:text="Características del Producto" />
+
+            <TextView
+                android:id="@+id/txtCaractrtistica1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:paddingStart="10dp"
+                android:paddingLeft="10dp"
+                android:paddingEnd="10dp"
+                android:paddingRight="10dp"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:text="- Caracteristica 1" />
+
+            <TextView
+                android:id="@+id/txtCaractrtistica2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingStart="10dp"
+                android:paddingLeft="10dp"
+                android:paddingEnd="10dp"
+                android:paddingRight="10dp"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:text="- Caracteristica 2" />
+
+            <TextView
+                android:id="@+id/txtCaractrtistica3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingStart="10dp"
+                android:paddingLeft="10dp"
+                android:paddingEnd="10dp"
+                android:paddingRight="10dp"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:text="- Caracteristica 3" />
+
+            <TextView
+                android:id="@+id/txtCaractrtistica4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingStart="10dp"
+                android:paddingLeft="10dp"
+                android:paddingEnd="10dp"
+                android:paddingRight="10dp"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:text="- Caracteristica 4" />
+
+            <Button
+                android:id="@+id/btnVerMasCaract"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:backgroundTint="@color/white"
+                android:textColor="#407af8"
+                android:layout_marginTop="25dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:text="Ver todas las características          >" />
+
+            <TextView
+                android:id="@+id/txtTitVendedorInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:paddingStart="10dp"
+                android:paddingLeft="10dp"
+                android:paddingEnd="10dp"
+                android:paddingRight="10dp"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:text="Información del vendedor" />
+
+            <TextView
+                android:id="@+id/txtTituloUbicacion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingStart="10dp"
+                android:paddingLeft="10dp"
+                android:paddingEnd="10dp"
+                android:paddingRight="10dp"
+                android:textSize="16sp"
+                android:drawableLeft="@drawable/ic_location"
+                android:textColor="@color/black"
+                android:text=" Ubicación" />
+
+            <TextView
+                android:id="@+id/txtUbicacionSeller"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:paddingStart="30dp"
+                android:paddingLeft="30dp"
+                android:paddingEnd="10dp"
+                android:paddingRight="10dp"
+                android:textSize="14sp"
+                android:text="Ubicación vendedor" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:id="@+id/imgRate1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="10dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    app:srcCompat="@drawable/fondo_gris" />
+
+                <ImageView
+                    android:id="@+id/imgRate2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="10dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    app:srcCompat="@drawable/fondo_gris" />
+
+                <ImageView
+                    android:id="@+id/imgRate3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="10dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    app:srcCompat="@drawable/fondo_gris" />
+
+                <ImageView
+                    android:id="@+id/imgRate4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="10dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    app:srcCompat="@drawable/fondo_gris" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtCalificacionVendedor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginEnd="10dp"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:inputType="textMultiLine"
+                android:ems="10"
+                android:text="Calificación del vendedor referente a las ventas realizasadas, texto de prueba" />
+
+            <TextView
+                android:id="@+id/txtPagaconMercadoPago"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginEnd="10dp"
+                android:textSize="14sp"
+                android:inputType="textMultiLine"
+                android:ems="10"
+                android:text="Paga con Mercado Pago y protegemos el 100% de tu dinero" />
+
+            <Button
+                android:id="@+id/btnVerDatosVendedor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:backgroundTint="@color/white"
+                android:textColor="#407af8"
+                android:layout_marginTop="25dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:text="Ver mas datos de este vendedor          >" />
+
+            <TextView
+                android:id="@+id/txtTitDescripcion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:paddingStart="10dp"
+                android:paddingLeft="10dp"
+                android:paddingEnd="10dp"
+                android:paddingRight="10dp"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:text="Descripción" />
+
+            <TextView
+                android:id="@+id/txtDescripcionDetalle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textMultiLine"
+                android:layout_marginTop="10dp"
+                android:paddingStart="10dp"
+                android:paddingLeft="10dp"
+                android:paddingEnd="10dp"
+                android:paddingRight="10dp"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:text="Descripción mas detallada del artículo" />
+
+            <TextView
+                android:id="@+id/txtTitDevolucionDetalle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:paddingStart="10dp"
+                android:paddingLeft="10dp"
+                android:paddingEnd="10dp"
+                android:paddingRight="10dp"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:text="Devolución gratis" />
+
+            <TextView
+                android:id="@+id/txtDevolucionDetalle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textMultiLine"
+                android:layout_marginTop="10dp"
+                android:paddingStart="10dp"
+                android:paddingLeft="10dp"
+                android:paddingEnd="10dp"
+                android:paddingRight="10dp"
+                android:textSize="16sp"
+                android:text="Tienes 30 días desde que recibes el producto para devolverlo ¡No imorta el motivo!" />
+
+            <Button
+                android:id="@+id/btnDevolucionDetalle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:backgroundTint="@color/white"
+                android:textColor="#407af8"
+                android:layout_marginTop="25dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:text="Conoce más sobre devoluciones          >" />
+
+            <TextView
+                android:id="@+id/txtTitGarantia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:paddingStart="10dp"
+                android:paddingLeft="10dp"
+                android:paddingEnd="10dp"
+                android:paddingRight="10dp"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:text="Garantía" />
+
+            <TextView
+                android:id="@+id/txtTitCompraProtegida"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textMultiLine"
+                android:layout_marginTop="10dp"
+                android:paddingStart="10dp"
+                android:paddingLeft="10dp"
+                android:paddingEnd="10dp"
+                android:paddingRight="10dp"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:text="Compra Protegida con Mercado Pago" />
+
+            <TextView
+                android:id="@+id/txtGarantiaDetalle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textMultiLine"
+                android:layout_marginTop="10dp"
+                android:paddingStart="10dp"
+                android:paddingLeft="10dp"
+                android:paddingEnd="10dp"
+                android:paddingRight="10dp"
+                android:textSize="16sp"
+                android:text="Recibe el producto que esperabas o te devolvemos tu dinero" />
+
+            <Button
+                android:id="@+id/btnConoceGarantia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:backgroundTint="@color/white"
+                android:textColor="#407af8"
+                android:layout_marginTop="25dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:text="Conoce más sobre garantía          >" />
+
+            <TextView
+                android:id="@+id/txtTitMediosPago"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:paddingStart="10dp"
+                android:paddingLeft="10dp"
+                android:paddingEnd="10dp"
+                android:paddingRight="10dp"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:text="Medios de pago" />
+
+            <Button
+                android:id="@+id/btnMediosPago"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:textSize="14sp"
+                android:backgroundTint="#529464"
+                android:drawableLeft="@drawable/ic_baseline_credit_card_24"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:text="¡Paga en hasta 12 meses sin intereses!" />
+
+            <TextView
+                android:id="@+id/txtTit12Meses"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/black"
+                android:text="Hasta 12 meses sin intereses" />
+
+            <ImageView
+                android:id="@+id/imgMercadoCredito"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_gravity="start"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                app:srcCompat="@drawable/mercadocredito" />
+
+            <TextView
+                android:id="@+id/txtTitTarjetasCredito"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/black"
+                android:text="Tarjetas de Crédito" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="10"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgVisaLogo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    app:srcCompat="@drawable/visalogo" />
+
+                <ImageView
+                    android:id="@+id/imgMasterCardLogo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/mastercardlogo" />
+
+                <ImageView
+                    android:id="@+id/imgAmexLogo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/amexlogo" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtTarjetasDebito"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/black"
+                android:text="Tarjetas de Débito" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="15"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgVisaDebito"
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    app:srcCompat="@drawable/visalogo" />
+
+                <ImageView
+                    android:id="@+id/imgMasterCardDebito"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/mastercardlogo" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView30"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/black"
+                android:text="Efectivo" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="15"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgOxxoLogo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/oxxologo" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnMetodosPago"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:backgroundTint="@color/white"
+                android:textColor="#407af8"
+                android:layout_marginTop="25dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:text="Conoce otros métodos de pago         >" />
+
+            <TextView
+                android:id="@+id/txtTitPregyResp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:paddingStart="10dp"
+                android:paddingLeft="10dp"
+                android:paddingEnd="10dp"
+                android:paddingRight="10dp"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:text="Preguntas y respuestas" />
+
+            <TextView
+                android:id="@+id/txtTitPregunta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingStart="10dp"
+                android:paddingLeft="10dp"
+                android:paddingEnd="10dp"
+                android:paddingRight="10dp"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:text="Pregúntale al vendedor" />
+
+            <EditText
+                android:id="@+id/editTextTextMultiLine"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="Escribe tu pregunta"
+                android:layout_marginTop="10dp"
+                android:paddingStart="10dp"
+                android:paddingLeft="10dp"
+                android:paddingEnd="10dp"
+                android:paddingRight="10dp"
+                android:textSize="16sp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/black"
+                android:background="@drawable/fondo_shadow"
+                android:inputType="textMultiLine" />
+
+            <Button
+                android:id="@+id/button13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:paddingStart="10dp"
+                android:paddingLeft="10dp"
+                android:paddingEnd="10dp"
+                android:paddingRight="10dp"
+                android:textAllCaps="false"
+                android:backgroundTint="#407af8"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:text="Preguntar" />
+        </LinearLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

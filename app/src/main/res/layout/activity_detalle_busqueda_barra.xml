@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetalleBusquedaBarra">
+
+    <LinearLayout
+        android:id="@+id/LinearSearchBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="30">
+
+        <ImageButton
+            android:id="@+id/imageButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:paddingStart="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingEnd="10dp"
+            android:background="@drawable/fondo_shadow"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_arrowleft" />
+
+        <EditText
+            android:id="@+id/etSerchText"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_weight="29"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text=""
+            android:background="@drawable/fondo_shadow"
+            android:hint="Buscar en Mercado Libre"
+            android:paddingStart="10dp"
+            android:paddingLeft="10dp"
+            android:paddingEnd="10dp"
+            android:paddingRight="10dp"
+            tools:layout_editor_absoluteX="48dp"
+            tools:layout_editor_absoluteY="-3dp" />
+
+    </LinearLayout>
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LinearSearchBar" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
