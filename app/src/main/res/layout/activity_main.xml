@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -35,6 +36,7 @@
                 android:ems="10"
                 android:textSize="14sp"
                 android:layout_gravity="center"
+                android:textColorHint="@color/gray"
                 android:drawableLeft="@drawable/ic_search"
                 android:hint="Buscar en Mercado Libre"
                 android:paddingStart="15dp"
@@ -43,8 +45,10 @@
                 android:paddingRight="15dp"
                 android:paddingTop="6dp"
                 android:paddingBottom="6dp"
+                android:imeOptions="actionSearch"
                 android:background="@drawable/fondo_white"
                 android:inputType="textPersonName"
+                android:textColor="@color/black"
                 android:text="" />
 
             <ImageButton
@@ -57,14 +61,14 @@
                 android:tint="@color/black"
                 android:backgroundTint="@color/black"
                 android:foregroundTint="@color/black"
-                app:srcCompat="@drawable/ic_cart" />
+                app:srcCompat="@drawable/ic_cartunfill" />
         </LinearLayout>
 
         <Button
             android:id="@+id/btnAddress"
             android:layout_width="match_parent"
             android:layout_height="34dp"
-            android:drawableLeft="@drawable/ic_location"
+            android:drawableLeft="@drawable/ic_locationunfill"
             android:background="@android:color/transparent"
             android:textSize="12sp"
             android:textAlignment="textStart"

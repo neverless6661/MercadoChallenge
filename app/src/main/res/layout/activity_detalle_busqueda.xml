@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".DetalleBusqueda">
 
     <LinearLayout
@@ -37,10 +38,11 @@
                 android:layout_marginLeft="10dp"
                 android:textSize="22sp"
                 android:layout_weight="8"
+                android:textColor="@color/black"
                 android:text="Producto" />
 
             <ImageButton
-                android:id="@+id/imageButton"
+                android:id="@+id/imgAddFavorite"
                 android:layout_width="wrap_content"
                 android:layout_height="22dp"
                 android:layout_weight="2"
@@ -52,7 +54,7 @@
                 app:srcCompat="@drawable/heart" />
 
             <ImageButton
-                android:id="@+id/imageButton2"
+                android:id="@+id/imgSearch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
@@ -73,14 +75,14 @@
                 android:tint="@color/black"
                 android:backgroundTint="@color/black"
                 android:foregroundTint="@color/black"
-                app:srcCompat="@drawable/ic_cart" />
+                app:srcCompat="@drawable/ic_cartunfill" />
         </LinearLayout>
 
         <Button
             android:id="@+id/btnAddress"
             android:layout_width="match_parent"
             android:layout_height="34dp"
-            android:drawableLeft="@drawable/ic_location"
+            android:drawableLeft="@drawable/ic_locationunfill"
             android:background="@android:color/transparent"
             android:textSize="12sp"
             android:textAlignment="textStart"
@@ -112,10 +114,11 @@
                 android:paddingEnd="10dp"
                 android:paddingRight="10dp"
                 android:textSize="14sp"
+                android:textColor="@color/gray"
                 android:text="Condición" />
 
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/txtTitArticuloDetalle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -130,7 +133,11 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:weightSum="30"
+                android:weightSum="200"
+                android:paddingStart="10dp"
+                android:paddingLeft="10dp"
+                android:paddingEnd="10dp"
+                android:paddingRight="10dp"
                 android:orientation="horizontal">
 
                 <ImageView
@@ -172,6 +179,7 @@
                     android:id="@+id/txtReputationArt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
                     android:layout_weight="1"
                     android:text="(0)" />
             </LinearLayout>
@@ -590,6 +598,7 @@
                 android:paddingEnd="10dp"
                 android:paddingRight="10dp"
                 android:textSize="16sp"
+                android:drawableTint="@color/gray"
                 android:drawableLeft="@drawable/ic_location"
                 android:textColor="@color/black"
                 android:text=" Ubicación" />
@@ -604,6 +613,7 @@
                 android:paddingEnd="10dp"
                 android:paddingRight="10dp"
                 android:textSize="14sp"
+                android:textColor="@color/gray"
                 android:text="Ubicación vendedor" />
 
             <LinearLayout
@@ -684,6 +694,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginEnd="10dp"
                 android:textSize="14sp"
+                android:textColor="@color/gray"
                 android:inputType="textMultiLine"
                 android:ems="10"
                 android:text="Paga con Mercado Pago y protegemos el 100% de tu dinero" />
@@ -728,6 +739,7 @@
                 android:paddingRight="10dp"
                 android:textSize="16sp"
                 android:textColor="@color/black"
+
                 android:text="Descripción mas detallada del artículo" />
 
             <TextView
@@ -755,6 +767,7 @@
                 android:paddingEnd="10dp"
                 android:paddingRight="10dp"
                 android:textSize="16sp"
+                android:textColor="@color/gray"
                 android:text="Tienes 30 días desde que recibes el producto para devolverlo ¡No imorta el motivo!" />
 
             <Button
@@ -811,6 +824,7 @@
                 android:paddingEnd="10dp"
                 android:paddingRight="10dp"
                 android:textSize="16sp"
+                android:textColor="@color/gray"
                 android:text="Recibe el producto que esperabas o te devolvemos tu dinero" />
 
             <Button
@@ -1032,7 +1046,7 @@
             <EditText
                 android:id="@+id/editTextTextMultiLine"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="80dp"
                 android:ems="10"
                 android:gravity="start|top"
                 android:hint="Escribe tu pregunta"
@@ -1042,6 +1056,7 @@
                 android:paddingEnd="10dp"
                 android:paddingRight="10dp"
                 android:textSize="16sp"
+                android:textColorHint="@color/gray"
                 android:layout_marginStart="10dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginEnd="10dp"
@@ -1054,6 +1069,7 @@
                 android:id="@+id/btnPreguntar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColorHint="@color/gray"
                 android:layout_marginTop="15dp"
                 android:paddingStart="10dp"
                 android:paddingLeft="10dp"
@@ -1066,6 +1082,16 @@
                 android:layout_marginEnd="10dp"
                 android:layout_marginRight="10dp"
                 android:text="Preguntar" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+
+                android:layout_height="100dp"
+                android:text="" />
         </LinearLayout>
+
+
+
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
