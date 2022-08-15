@@ -35,12 +35,15 @@ public class MainActivity extends AppCompatActivity {
     EditText etSearchField;
     String textobusqueda;
     ProgressDialog progressDialog;
+    String historial;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+        //Agregar historial
         etSearchField = (EditText) findViewById(R.id.etSearchField);
         etSearchField.setOnKeyListener(new View.OnKeyListener() {
             @Override
